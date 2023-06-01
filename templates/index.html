@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<div class="cv-box">
+    <h4>СТОЛОТО barcode</h4>
+    <form action="check" method="post" enctype="multipart/form-data">
+
+
+        <label id="label" for="barcode">Выберите изображение с barcode кодом</label>
+        <input type="file" id="barcode" name="file"><br><br>
+        <input type="submit" id="submitBtn" value="Загрузить">
+
+    </form>
+    {% if barcode %}
+    <p class="barcode_info">
+        barcode распознан
+    <p/>
+    <p class="barcode_info">
+        Информация из Штрихкода кода: {{ barcode }}
+    <p/>
+    {% elif error %}
+    <p class="barcode_info">
+        Ошибка: {{ error }}
+    </p>
+    {% endif %}
+</div>
+</html>

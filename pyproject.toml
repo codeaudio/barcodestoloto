@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "barcodestoloto"
+version = "0.1.0"
+description = ""
+authors = ["i.kapustin <“iva.big2015@yandex.ru”>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.95.2"
+uvicorn = "^0.22.0"
+jinja2 = "^3.1.2"
+python-multipart = "^0.0.6"
+pyzbar = "^0.1.9"
+opencv-python = "^4.7.0.72"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  stoloto-barcode:
+    container_name: stoloto-barcode
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: stoloto-barcode
+    ports:
+      - 8000:80
+    volumes:
+      - .:/opt/stoloto
